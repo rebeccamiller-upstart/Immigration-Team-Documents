@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Card Sponsorship Policy – Upstart Immigration Team</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Figtree', 'Segoe UI', Arial, sans-serif;
+  background: #EFFAFB;
+  padding: 20px;
+}
+
+/* ── WRAPPER ── */
+#pdf-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 8px;
+  background: #fff;
+}
+.guide {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.16);
+}
+
+/* ── HEADER ── */
+.hdr {
+  background: linear-gradient(128deg, #00625F 0%, #00807B 48%, #00B1AC 100%);
+  padding: 18px 32px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hdr::before {
+  content: ''; position: absolute; right: 30px; top: -50px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.hdr::after {
+  content: ''; position: absolute; left: -30px; bottom: -40px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.logo-row {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; margin-bottom: 11px; position: relative;
+}
+.logo-row img { height: 22px; width: auto; display: block; }
+.logo-row .pipe { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.38); }
+.logo-row .sub { font-size: 8.5px; font-weight: 600; color: rgba(255,255,255,0.82); text-transform: uppercase; letter-spacing: 2.8px; }
+.hdr h1 {
+  font-size: 21px; font-weight: 900; color: #fff;
+  text-transform: uppercase; letter-spacing: 0.4px; line-height: 1.15;
+  margin-bottom: 6px; position: relative;
+}
+.hdr p {
+  font-size: 10.5px; color: rgba(255,255,255,0.86); line-height: 1.55;
+  max-width: 480px; margin: 0 auto; position: relative;
+}
+.hdr-rule {
+  width: 38px; height: 2px; background: rgba(255,255,255,0.32);
+  border-radius: 2px; margin: 9px auto 0;
+}
+
+/* ── BODY ── */
+.body { padding: 22px 26px 26px; }
+
+/* ── CARD ── */
+.card {
+  border: 1.5px solid #C1E9E7;
+  border-radius: 9px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.card:last-child { margin-bottom: 0; }
+
+.card-hdr {
+  background: linear-gradient(135deg, #00625F 0%, #00807B 100%);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.card-hdr-icon {
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(255,255,255,0.14);
+  display: flex; align-items: center; justify-content: center;
+}
+.card-hdr-icon svg { width: 14px; height: 14px; }
+.card-hdr-title {
+  font-size: 11px; font-weight: 800; color: #fff; line-height: 1.25; letter-spacing: 0.2px;
+}
+
+.card-body { padding: 15px 17px; }
+
+/* ── TYPOGRAPHY ── */
+.txt {
+  font-size: 10.5px;
+  color: #2c3e50;
+  line-height: 1.72;
+}
+.txt strong { color: #00625F; font-weight: 700; }
+.txt a { color: #00807B; font-weight: 700; text-decoration: none; }
+.txt + .txt { margin-top: 9px; }
+.txt + ul { margin-top: 7px; }
+
+ul.pts {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+ul.pts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 10.5px;
+  color: #2c3e50;
+  line-height: 1.72;
+  padding-bottom: 7px;
+}
+ul.pts li > span {
+  flex: 1;
+  min-width: 0;
+}
+ul.pts li:last-child { padding-bottom: 0; }
+ul.pts li::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #00B1AC;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+ul.pts li strong { color: #00625F; font-weight: 700; }
+ul.pts li a { color: #00807B; font-weight: 700; text-decoration: none; }
+
+/* ── CALLOUT TEAL ── */
+.ct {
+  background: #EFFAFB;
+  border-left: 3px solid #00B1AC;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 13px;
+  margin-top: 11px;
+  font-size: 10.5px;
+  color: #2c3e50;
+  line-height: 1.68;
+}
+.ct strong { color: #00625F; font-weight: 700; }
+
+/* ── CALLOUT AMBER ── */
+.ca {
+  background: #fffdf2;
+  border-left: 3px solid #e0a020;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 13px;
+  margin-top: 11px;
+  font-size: 10.5px;
+  color: #5a3e00;
+  line-height: 1.68;
+}
+.ca strong { color: #7a5300; font-weight: 700; }
+
+/* ── PERFORMANCE BADGE ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #C1E9E7;
+  border-radius: 20px;
+  padding: 5px 14px;
+  margin-top: 11px;
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #00625F;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* ── INFO BANNER ── */
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  background: #EFFAFB;
+  border-left: 3px solid #00B1AC;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 13px;
+  margin-top: 18px;
+  font-size: 10.5px;
+  color: #2c3e50;
+  line-height: 1.65;
+}
+.info svg { flex-shrink: 0; margin-top: 2px; }
+.info a { color: #00807B; font-weight: 700; text-decoration: none; }
+
+/* ── FOOTER ── */
+.footer {
+  background: #EFFAFB;
+  border-top: 2px solid #C1E9E7;
+  padding: 10px 26px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.footer span { font-size: 10px; color: #2c3e50; }
+.footer a { color: #00807B; font-weight: 700; text-decoration: none; }
+
+/* ── DOWNLOAD BUTTON ── */
+#dl-btn {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  background: linear-gradient(135deg, #00807B, #00B1AC);
+  color: #fff; font-family: 'Figtree', sans-serif;
+  font-size: 12px; font-weight: 700;
+  padding: 10px 18px; border: none; border-radius: 8px; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,177,172,0.38);
+  display: flex; align-items: center; gap: 7px; transition: opacity .2s;
+}
+#dl-btn:hover { opacity: .88; }
+@media print { #dl-btn { display: none; } }
+</style>
+</head>
+<body>
+
+
+<div id="pdf-wrapper">
+<div class="guide" id="guide">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="logo-row">
+      <img src="data:image/png;base64,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" alt="Upstart" />
+      <span class="pipe">|</span>
+      <span class="sub">Immigration Team</span>
+    </div>
+    <h1>Permanent Resident (Green Card)<br>Sponsorship Policy</h1>
+    <p>Guidelines for green card sponsorship paths, eligibility, and filing requirements at Upstart.</p>
+    <div class="hdr-rule"></div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- 1. Sponsorship Policy -->
+    <div class="card">
+      <div class="card-hdr">
+        <div class="card-hdr-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l1.5 4.5H18l-3.75 2.75 1.5 4.5L12 12l-3.75 2.75 1.5-4.5L6 7.5h4.5L12 3z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="card-hdr-title">Sponsorship Policy</span>
+      </div>
+      <div class="card-body">
+        <ul class="pts">
+          <li><span>Upstart offers day 1 green card sponsorship to Upstarters in roles that qualify for immigration sponsorship or support.</span></li>
+          <li><span>At its discretion, Upstart may pursue multiple green card sponsorship paths (e.g., parallel PERM and EB-1A sponsorship, etc.) on behalf of a sponsored Upstarter.</span></li>
+          <li><span>Upstart reserves the right to pause or cease green card sponsorship at any time for any or no reason.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. Categorization Eligibility -->
+    <div class="card">
+      <div class="card-hdr">
+        <div class="card-hdr-icon">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" stroke="white" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="1.5" stroke="white" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="1.5" stroke="white" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="1.5" stroke="white" stroke-width="1.6"/></svg>
+        </div>
+        <span class="card-hdr-title">Sponsorship Categorization Eligibility</span>
+      </div>
+      <div class="card-body">
+        <p class="txt">The U.S. residency system is built on a <strong>"preference" hierarchy</strong>. Categorization eligibility is based on the Upstarter's professional profile and role.</p>
+        <div class="ct">The <strong>External Legal Team</strong> and <strong>Upstart Immigration Team</strong> will review the credentials and role of a sponsored Upstarter and recommend the most advantageous permanent residency path(s).</div>
+      </div>
+    </div>
+
+    <!-- 3. EB-1A -->
+    <div class="card">
+      <div class="card-hdr">
+        <div class="card-hdr-icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.6"/><path d="M8 12l3 3 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="card-hdr-title">EB-1A (Extraordinary Ability) Sponsorship Requests</span>
+      </div>
+      <div class="card-body">
+        <ul class="pts">
+          <li><span>At Upstarter or business request, Upstart will approve one (1) legal review of EB-1A eligibility within a rolling 12-month period.</span></li>
+          <li><span>If the External Legal Team determines that sponsorship under the EB-1A category is likely to be successful, per our <a href="https://app.getguru.com/card/T69oko8c/EB1A-Sponsorship-Eligibility-Framework">EB-1A Sponsorship Eligibility Framework</a>, the Upstart Immigration Team will approve the project.</span></li>
+          <li><span>Conversely, if there is no reasonable legal belief that EB-1A sponsorship will be successful, the request will be declined and guidance will be provided for how to strengthen the case.</span></li>
+          <li><span>Our Upstarters are eligible to revisit the request once their case has been strengthened, per provided legal guidance.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. AOS Filing Policy -->
+    <div class="card">
+      <div class="card-hdr">
+        <div class="card-hdr-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 2v6h6M9 13h6M9 17h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <span class="card-hdr-title">Adjustment of Status (AOS / Green Card) Filing Policy</span>
+      </div>
+      <div class="card-body">
+        <p class="txt">Upstarters become eligible to file for Adjustment of Status (<strong>"AOS"</strong>; aka, green card) once their <strong>priority date becomes current</strong>. The External Legal Team will advise once an Upstarter is eligible to file their AOS.</p>
+        <p class="txt">To qualify for automatic AOS project approval, Upstarters must have received a <strong>"Strong Performer"</strong> rating in the preceding six (6) months.</p>
+      </div>
+    </div>
+
+    <!-- 5. EB-2 to EB-3 Downgrade -->
+    <div class="card">
+      <div class="card-hdr">
+        <div class="card-hdr-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3v12M5 21h14" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <span class="card-hdr-title">EB-2 to EB-3 Downgrade and Interfiling Requests</span>
+      </div>
+      <div class="card-body">
+        <p class="txt">Upstart supports a <strong>single request</strong> to downgrade from EB-2 to EB-3 or submit an interfiling request. This request will be approved after the Upstarter has a consultation with the <strong>External Legal Team</strong> and understands and acknowledges the risks, if any, of doing so.</p>
+      </div>
+    </div>
+
+    <!-- 6. Travel While AOS Pending -->
+    <div class="card">
+      <div class="card-hdr">
+        <div class="card-hdr-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="white" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="white" stroke-width="1.5"/></svg>
+        </div>
+        <span class="card-hdr-title">Travel While an AOS Application is Pending with USCIS</span>
+      </div>
+      <div class="card-body">
+        <p class="txt">To ensure compliance with USCIS requirements, Upstarters must be <strong>physically present in the U.S.</strong> at the time of the Adjustment of Status (green card) filing, and remain physically present in the U.S. until the original receipt notices are issued and the <strong>Advance Parole (AP)</strong> travel document is received.</p>
+        <div class="ca">
+          <strong>⚠ Do not make travel plans</strong> while an AOS application is pending without first consulting the Immigration Team. Departing the U.S. before your Advance Parole document is issued may result in <strong>abandonment of your AOS application</strong>.
+        </div>
+      </div>
+    </div>
+
+    <!-- Info banner -->
+    <div class="info">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#00B1AC" stroke-width="1.8"/><path d="M12 11v5M12 8h.01" stroke="#00B1AC" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Curious about green card categories? Review our <a href="#">Permanent Residency: An Overview</a> Guru page.</span>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#00807B" stroke-width="1.8" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke="#00807B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Questions? Contact us at <a href="mailto:immigration-team@upstart.com">immigration-team@upstart.com</a></span>
+  </div>
+
+</div><!-- /guide -->
+</div><!-- /pdf-wrapper -->
+
+<script>
+function dl() {
+  const btn = document.getElementById('dl-btn');
+  btn.style.display = 'none';
+  const el = document.getElementById('pdf-wrapper');
+  html2pdf().set({
+    margin: 0,
+    filename: 'Upstart_GreenCard_Sponsorship_Policy.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: { unit: 'px', format: [el.offsetWidth, el.offsetHeight], orientation: 'portrait' }
+  }).from(el).save().then(() => { btn.style.display = 'flex'; });
+}
+</script>
+</body>
+</html>
