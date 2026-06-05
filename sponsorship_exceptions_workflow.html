@@ -168,27 +168,10 @@ body {
 .footer-text { font-size: 10px; color: #2c3e50; }
 .footer-text a { color: #00807B; font-weight: 700; text-decoration: none; }
 
-/* PDF BUTTON */
-#pdf-btn {
-  position: fixed; bottom: 28px; right: 28px; z-index: 999;
-  background: linear-gradient(135deg, #00807B, #00B1AC);
-  color: white; font-family: 'Figtree', sans-serif;
-  font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
-  padding: 11px 20px; border: none; border-radius: 8px; cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0,177,172,0.40);
-  display: flex; align-items: center; gap: 8px; transition: opacity 0.2s;
-}
-#pdf-btn:hover { opacity: 0.88; }
-@media print { #pdf-btn { display: none; } }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
-<button id="pdf-btn" onclick="downloadPDF()">
-  <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1v9M8 10l-3-3M8 10l3-3M2 13h12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  Download PDF
-</button>
 
 <div id="pdf-wrapper" style="background:#fff; padding: 8px;">
 <div class="guide" id="guide" style="border: 1px solid rgba(0,0,0,0.20);">
@@ -298,8 +281,7 @@ body {
           </svg>
         </div>
         <div>
-          <div class="approver-name">VP, People Programs</div>
-          <div class="approver-title">&amp; Platforms</div>
+          <div class="approver-name">VP, People Programs &amp; Platforms</div>
         </div>
       </div>
     </div>
@@ -344,7 +326,7 @@ body {
             </li>
             <li class="step-item">
               <div class="step-num">4</div>
-              <div class="step-text">Approval obtained from <strong>Team Lead</strong> and <strong>Sr. Director, HRBPs</strong>.</div>
+              <div class="step-text">Approval obtained from <strong>Team Lead</strong>, <strong>Sr. Director, HRBPs</strong>, and <strong>VP, People Programs &amp; Platforms</strong>.</div>
             </li>
           </ol>
         </div>
@@ -376,7 +358,7 @@ body {
             </li>
             <li class="step-item">
               <div class="step-num">3</div>
-              <div class="step-text">Exception request submitted to <a href="mailto:immigration-team@upstart.com">immigration-team@upstart.com</a> and approved by <strong>Team Lead</strong> and <strong>VP, Talent Acquisition</strong>.</div>
+              <div class="step-text">Exception request submitted to <a href="mailto:immigration-team@upstart.com">immigration-team@upstart.com</a> and approved by <strong>Team Lead</strong>, <strong>VP, Talent Acquisition</strong>, and <strong>VP, People Programs &amp; Platforms</strong>.</div>
             </li>
             <li class="step-item">
               <div class="step-num">4</div>
@@ -432,23 +414,5 @@ body {
 </div><!-- /guide -->
 </div><!-- /pdf-wrapper -->
 
-<script>
-function downloadPDF() {
-  const btn = document.getElementById('pdf-btn');
-  btn.classList.add('loading');
-  btn.textContent = 'Generating…';
-  const el = document.getElementById('pdf-wrapper');
-  html2pdf().set({
-    margin: 0,
-    filename: 'Upstart_Sponsorship_Exceptions_Workflow.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true },
-    jsPDF: { unit: 'px', format: [el.offsetWidth, el.offsetHeight], orientation: 'portrait' }
-  }).from(el).save().then(() => {
-    btn.classList.remove('loading');
-    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1v9M8 10l-3-3M8 10l3-3M2 13h12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Download PDF';
-  });
-}
-</script>
 </body>
 </html>
