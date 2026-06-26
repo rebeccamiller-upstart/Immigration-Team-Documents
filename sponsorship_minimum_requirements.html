@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsorship &amp; Support — Minimum Requirements – Upstart Immigration Team</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Figtree', 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+.guide {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.14);
+}
+.header {
+  background: linear-gradient(128deg, #00625F 0%, #00807B 50%, #00B1AC 100%);
+  color: white;
+  padding: 14px 28px 16px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.header::before {
+  content: ''; position: absolute; right: 60px; top: -40px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.header::after {
+  content: ''; position: absolute; right: -20px; bottom: -30px;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 65%);
+  border-radius: 50%;
+}
+.logo-lockup { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; }
+.logo-img { height: 22px; width: auto; display: block; }
+.logo-pipe { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.40); line-height: 1; padding: 0 1px; }
+.logo-subbrand { font-size: 9px; font-weight: 500; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 2.5px; line-height: 1; }
+.header h1 { font-size: 20px; font-weight: 900; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 5px; }
+.header-sub { font-size: 10.5px; color: rgba(255,255,255,0.90); max-width: 600px; margin: 0 auto; line-height: 1.5; font-weight: 400; }
+
+.req-table { width: 100%; border-collapse: collapse; }
+.req-table thead tr { background: linear-gradient(90deg, #00625F, #00807B); }
+.req-table th {
+  font-size: 9px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.8px; padding: 9px 12px; text-align: left;
+  color: white; vertical-align: bottom; line-height: 1.4;
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+.req-table th:last-child { border-right: none; }
+.req-table td {
+  font-size: 9.5px; padding: 11px 12px;
+  vertical-align: top; border-bottom: 1px solid #e0eaeb;
+  color: #2c3e50; line-height: 1.55;
+  border-right: 1px solid #e8f0f1;
+}
+.req-table td:last-child { border-right: none; }
+.req-table tbody tr:last-child td { border-bottom: none; }
+.req-table tbody tr:nth-child(even) td { background: #f8fbfb; }
+.req-table tbody tr:nth-child(even) td.cat-cell { background: #edf8f8; }
+
+.cat-cell {
+  border-left: 3px solid #00B1AC !important;
+  background: #f2fbfb;
+  font-weight: 800;
+  font-size: 9.5px;
+  color: #00625F;
+  vertical-align: top;
+  width: 15%;
+}
+.req-list { list-style: none; padding: 0; margin: 0; }
+.req-list li { padding-left: 13px; position: relative; margin-bottom: 5px; font-size: 9.5px; line-height: 1.55; }
+.req-list li::before { content: '•'; position: absolute; left: 2px; color: #00B1AC; font-weight: 900; font-size: 10px; line-height: 1.4; }
+.req-list li:last-child { margin-bottom: 0; }
+.sub-list { list-style: none; padding: 0; margin: 4px 0 0 10px; }
+.sub-list li { padding-left: 13px; position: relative; margin-bottom: 3px; font-size: 9px; line-height: 1.5; }
+.sub-list li::before { content: '–'; position: absolute; left: 1px; color: #667; font-size: 9px; }
+
+.pg-label { font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #00807B; margin-bottom: 2px; display: block; }
+.pg-block { margin-bottom: 9px; }
+.pg-block:last-child { margin-bottom: 0; }
+
+.sla-box { background: #EFFAFB; border: 1px solid #C1E9E7; border-left: 3px solid #00B1AC; border-radius: 4px; padding: 6px 8px; margin-top: 6px; }
+.sla-box .sla-label { font-size: 7.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #00807B; margin-bottom: 2px; }
+.sla-box p { font-size: 9px; color: #2c3e50; line-height: 1.5; }
+
+.important-box { background: #fffdf2; border: 1px solid #e0a020; border-left: 3px solid #e0a020; border-radius: 4px; padding: 6px 8px; margin-bottom: 8px; }
+.important-box .imp-label { font-size: 7.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #7a5300; margin-bottom: 2px; }
+.important-box p { font-size: 9px; color: #5a3e00; line-height: 1.5; }
+
+.timing-block { background: #f4f8f8; border-radius: 4px; padding: 6px 8px; margin-bottom: 8px; }
+.timing-block .t-label { font-size: 7.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #667; margin-bottom: 2px; }
+.timing-block p { font-size: 9px; color: #2c3e50; line-height: 1.5; }
+.timing-block strong { color: #00625F; }
+
+.pp-cell { text-align: center; vertical-align: middle !important; width: 11%; }
+.pp-yes { display: inline-block; background: #d4f5e9; color: #1a6e42; font-size: 8.5px; font-weight: 800; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 12px; border: 1px solid #a3e4c7; white-space: nowrap; }
+.pp-no { display: inline-block; background: #fdecea; color: #b03030; font-size: 8.5px; font-weight: 800; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 12px; border: 1px solid #f5b8b8; white-space: nowrap; }
+.pp-na { display: inline-block; background: #f0f2f4; color: #667; font-size: 8.5px; font-weight: 800; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 12px; border: 1px solid #dde2e5; white-space: nowrap; }
+
+sup a { color: #00807B; text-decoration: none; font-size: 7.5px; }
+a { color: #00807B; text-decoration: underline; }
+
+.footnotes { background: #f8fbfb; border-top: 2px solid #C1E9E7; padding: 10px 16px; }
+.fn-title { font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: #00807B; margin-bottom: 6px; }
+.fn-item { font-size: 8.5px; color: #556; line-height: 1.55; margin-bottom: 5px; padding-left: 14px; position: relative; }
+.fn-item sup { position: absolute; left: 0; top: 1px; font-size: 8px; color: #00807B; font-weight: 700; }
+.fn-item:last-child { margin-bottom: 0; }
+
+.footer { background: #EFFAFB; padding: 9px 16px; border-top: 1px solid #C1E9E7; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer-contact { font-size: 9.5px; color: #00807B; }
+.footer-contact strong { font-size: 8px; letter-spacing: 1.2px; text-transform: uppercase; }
+.footer-contact a { color: #00807B; text-decoration: underline; font-weight: 600; }
+.footer-disclaimer { font-size: 8px; color: #778; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="guide">
+  <div class="header">
+    <div class="logo-lockup">
+      <img class="logo-img" src="data:image/png;base64,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" alt="Upstart" />
+      <span class="logo-pipe">|</span>
+      <span class="logo-subbrand">Immigration Team</span>
+    </div>
+    <h1>Sponsorship &amp; Support<br>Minimum Requirements</h1>
+    <p class="header-sub">Category-by-category requirements, planning guidance, and filing SLAs for all Upstart-sponsored immigration matters.</p>
+  </div>
+
+  <table class="req-table">
+    <thead>
+      <tr>
+        <th style="width:15%">Category</th>
+        <th style="width:32%">Minimum Requirements</th>
+        <th style="width:42%">Planning Guidance / Filing SLA</th>
+        <th style="width:11%; text-align:center;">Premium Processing Supported</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td class="cat-cell">Candidates not in H-1B, TN, O-1, or E-3 status</td>
+        <td>
+          <ul class="req-list">
+            <li>At least 1 year of valid U.S. work authorization remaining</li>
+            <li>Legal ability to start work by agreed upon start date</li>
+            <li>F-1 candidates must have at least one H-1B lottery opportunity remaining</li>
+            <li>Day 1 CPT cannot be used to:
+              <ul class="sub-list">
+                <li>Start employment, or</li>
+                <li>Meet eligibility requirements</li>
+              </ul>
+            </li>
+            <li>Dependent-based work authorization must be extendable</li>
+          </ul>
+        </td>
+        <td>
+          <div class="pg-block">
+            <span class="pg-label">Start Dates</span>
+            In most circumstances candidates in this category can start work immediately.
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-no">No</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">H-1B (Non-amendments), O-1, TN, or E-3 Extensions or Amendments</td>
+        <td>
+          <ul class="req-list">
+            <li>"Strong Performance" rating or greater granted in the preceding six (6) months</li>
+          </ul>
+        </td>
+        <td>
+          <div class="pg-block">
+            <span class="pg-label">Project Initiation</span>
+            Approved extension projects will be initiated 8 months prior to status expiration.
+          </div>
+          <div class="sla-box">
+            <div class="sla-label">External Legal Team Filing SLA</div>
+            <p>21 business days from the date questionnaires (employer and employee) and documents (employee) are submitted and confirmed accurate and complete.</p>
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-yes">Yes</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">H-1B Amendments</td>
+        <td>
+          <ul class="req-list">
+            <li>"Strong Performance" rating or greater granted in the preceding six (6) months</li>
+            <li>Early communication of future material changes to the Upstart Immigration Team via the <a href="https://upstartnetwork.atlassian.net/servicedesk/customer/portal/2103/group/3947/create/7207" target="_blank"><strong>Jira Job Change Notification</strong></a></li>
+            <li>Promotions or job changes must undergo legal review before made effective.<sup><a href="#fn2">2</a></sup></li>
+          </ul>
+        </td>
+        <td>
+          <div class="important-box">
+            <div class="imp-label">&#9888; Important</div>
+            <p>Early notice and coordination ensures compliance and avoids disruption to the Upstarter's work authorization or immigration status.</p>
+          </div>
+          <div class="sla-box">
+            <div class="sla-label">External Legal Team Filing SLA</div>
+            <p>10 business days from the date questionnaires (employer and employee) and documents (employee) are submitted and confirmed accurate and complete.</p>
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-yes">Yes</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">H-1B Transfers, cap-exempt H-1B petitions</td>
+        <td>
+          <ul class="req-list">
+            <li>Role and candidate meet H-1B eligibility criteria, as determined by the Upstart Immigration Team and External Legal Team</li>
+            <li>Approved I-140 <strong>OR</strong> &ge;1 year of H-1B time remaining, or an alternative work authorization stream</li>
+          </ul>
+        </td>
+        <td>
+          <div class="timing-block">
+            <div class="t-label">Start Date Timing</div>
+            <p><strong>~4&ndash;6 weeks</strong> if starting based on receipt. <strong>6&ndash;8 weeks</strong> if starting based on approval.</p>
+            <p style="margin-top:4px;">Start dates are <strong>tentative</strong> and recruiters and managers should plan for delays.</p>
+          </div>
+          <div class="sla-box">
+            <div class="sla-label">External Legal Team Filing SLA</div>
+            <p>10 business days from the date questionnaires (employer and employee) and documents (employee) are submitted and confirmed accurate and complete.</p>
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-yes">Yes</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">H-1B1 Petitions (all)</td>
+        <td>
+          <ul class="req-list">
+            <li>Role and candidate meet H-1B1 eligibility criteria, as determined by the Upstart Immigration Team and External Legal Team</li>
+          </ul>
+        </td>
+        <td>
+          <div class="timing-block">
+            <div class="t-label">Start Date Timing</div>
+            <p><strong>Filing inside the U.S.:</strong> 4&ndash;6 months after filing (ineligible for premium processing)</p>
+            <p style="margin-top:4px;"><strong>Applying outside the U.S.:</strong> 2&ndash;4 months after filing</p>
+            <p style="margin-top:4px;">Start dates are <strong>tentative</strong> and recruiters and managers should plan for delays.</p>
+          </div>
+          <div class="sla-box">
+            <div class="sla-label">External Legal Team Filing SLA</div>
+            <p>10 business days from the date questionnaires (employer and employee) and documents (employee) are submitted and confirmed accurate and complete.</p>
+          </div>
+          <div style="margin-top:7px; font-size:9px; color:#556;">Extension filings align with the H-1B extension policy.</div>
+        </td>
+        <td class="pp-cell"><span class="pp-na">N/A</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">O-1 (New Hire or Existing Upstarter)</td>
+        <td>
+          <ul class="req-list">
+            <li>Candidate demonstrates extraordinary ability (e.g., sustained acclaim, strong evidence across O-1 criteria)</li>
+            <li>Favorable case assessment by Upstart Immigration Team and External Legal Team</li>
+            <li>Clear evidence strategy (publications, awards, critical roles, media, judging, etc.)</li>
+          </ul>
+        </td>
+        <td>
+          <div class="pg-block">
+            <span class="pg-label">Key Notes</span>
+            <ul class="req-list" style="margin-top:4px;">
+              <li>Longer lead time required for case building (4&ndash;8+ weeks pre-filing)</li>
+              <li>Start dates are tentative until petition is <strong>approved</strong></li>
+              <li>Recruiters and managers should plan for variability in evidence readiness, RFEs and, at times, denials</li>
+            </ul>
+          </div>
+          <div class="sla-box">
+            <div class="sla-label">External Legal Team Filing SLA</div>
+            <p>56 business days from the date Upstarter questionnaire and documents are submitted and confirmed accurate and complete.</p>
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-yes">Yes</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">TN-NAFTA</td>
+        <td>
+          <p style="font-size:9.5px; line-height:1.55;">The role and candidate must satisfy TN classification criteria and be supported by a strong petition that clearly aligns the role with the TN profession, as determined by the Upstart Immigration Team and External Legal Team.</p>
+        </td>
+        <td>
+          <div class="pg-block">
+            <span class="pg-label">Start Dates</span>
+            New Hires will generally start within 4&ndash;8 weeks depending on whether they process at a port of entry or the petition is filed with USCIS.
+          </div>
+          <div class="sla-box">
+            <div class="sla-label">External Legal Team Filing SLA</div>
+            <p>14 business days from the date questionnaires (employer and employee) and documents (employee) are submitted and confirmed accurate and complete.</p>
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-yes">Yes</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">F-1 OPT and F-1 OPT STEM</td>
+        <td>
+          <ul class="req-list">
+            <li>Role qualifies as a specialty occupation (H-1B criteria) and is Upstart sponsorship-eligible</li>
+            <li>Must have at least one H-1B lottery opportunity remaining</li>
+            <li>Candidate meets education and experience requirements</li>
+            <li>Valid work authorization documentation, including:
+              <ul class="sub-list">
+                <li>Unexpired EAD, or</li>
+                <li>STEM OPT extension receipt (180-day auto-extension), or</li>
+              </ul>
+            </li>
+            <li>Commitment to timely OPT filing (if applicable)</li>
+          </ul>
+        </td>
+        <td>
+          <div class="pg-block">
+            <span class="pg-label">Start Dates</span>
+            In most circumstances candidates in this category can start work immediately.
+          </div>
+          <div class="pg-block">
+            <span class="pg-label">H-1B Pathway via H-1B Cap Lottery</span>
+            <ul class="req-list" style="margin-top:4px;">
+              <li>Upstart will pursue H-1B sponsorship for eligible candidates with remaining H-1B cap lottery opportunities</li>
+            </ul>
+          </div>
+          <div class="sla-box">
+            <div class="sla-label">External Legal Team Filing SLA (STEM Extension)</div>
+            <p>21 business days from the date questionnaires (employer and employee) and documents (employee) are submitted and confirmed accurate and complete.</p>
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-no">No</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">H-1B Cap Lottery</td>
+        <td>
+          <ul class="req-list">
+            <li>Role qualifies as a specialty occupation (H-1B criteria) and is Upstart sponsorship-eligible</li>
+            <li>Beneficiary is an active Upstarter or is a New Hire with a signed offer letter dated before March 1 of the relevant calendar year</li>
+          </ul>
+        </td>
+        <td>
+          <div class="pg-block">
+            <span class="pg-label">Project Initiation</span>
+            The Internal Legal Team will lead case management strategy and coordinate with TA, the HRBPs, Managers and the External Legal team from Q4 to Q3 to prepare H-1B cap lottery submission for the first week of March.
+          </div>
+          <div class="sla-box">
+            <div class="sla-label">External Legal Team Filing SLA (H-1B Cap Lottery Selections)</div>
+            <p>20 business days from the date questionnaires (employer and employee) and documents (employee) are submitted and confirmed accurate and complete.</p>
+          </div>
+        </td>
+        <td class="pp-cell" style="color:#aaa; font-size:11px;">&mdash;</td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">Day 1 CPT</td>
+        <td>
+          <div style="margin-bottom:8px;">
+            <div style="font-size:8.5px; font-weight:800; color:#b03030; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:4px;">Candidates &mdash; Not Supported For:</div>
+            <ul class="req-list">
+              <li>Starting employment, or</li>
+              <li>Meeting H-1B cap lottery entry eligibility requirements</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:8.5px; font-weight:800; color:#00625F; text-transform:uppercase; letter-spacing:0.8px; margin-bottom:4px;">Current Upstarters Only</div>
+            <ul class="req-list">
+              <li>Requests reviewed case-by-case by the Upstart Immigration Team</li>
+              <li>Approval depends on program compliance risk</li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div class="pg-block">
+            <span class="pg-label">Start Dates</span>
+            In most circumstances candidates in this category can start work immediately.
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-na">N/A</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">DACA / Asylum / TPS / Other Humanitarian Categories</td>
+        <td>
+          <p style="font-size:9.5px; line-height:1.55;">While not directly sponsored by Upstart, Upstart provides ancillary support to those who hold independent work authorization tied to DACA/Asylum/TPS, etc.</p>
+        </td>
+        <td>
+          <div class="pg-block">
+            <span class="pg-label">Start Dates</span>
+            In most circumstances candidates in this category can start work immediately.
+          </div>
+        </td>
+        <td class="pp-cell"><span class="pp-na">N/A</span></td>
+      </tr>
+
+      <tr>
+        <td class="cat-cell">Canada Transfer Work Permit Sponsorship</td>
+        <td>
+          <p style="font-size:9.5px; line-height:1.55; margin-bottom:8px;">Upstart only supports transfers to Canada in exceptional circumstances. Requests for transfer and work permit sponsorship will only be considered under the following conditions:</p>
+          <ul class="req-list">
+            <li>Exigent U.S. immigration circumstances materially limit the Upstarter's ability to continue living and working in the United States, as determined by the Upstart Immigration Team</li>
+            <li>The transfer is approved by the Upstarter's manager, department lead, HRBP Lead, and the VP of People Programs and Platforms</li>
+          </ul>
+        </td>
+        <td></td>
+        <td class="pp-cell" style="color:#aaa; font-size:11px;">&mdash;</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div class="footnotes">
+    <div class="fn-title">Notes</div>
+    <div class="fn-item" id="fn2">
+      <sup>2</sup>Under the H-1B modernization rules, any material change to employment terms &mdash; including job duties, job site, title, compensation, or other key conditions &mdash; requires an H-1B amendment petition be filed with USCIS <em>before</em> the change takes effect.
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-contact">
+      <strong>Questions?</strong>&nbsp; <a href="https://upstartnetwork.atlassian.net/servicedesk/customer/portal/2103" target="_blank">Submit an Immigration Jira Ticket</a>
+    </div>
+    <div class="footer-disclaimer">For internal use only &middot; Not legal advice</div>
+  </div>
+
+</div>
+</body>
+</html>
