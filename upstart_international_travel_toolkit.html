@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upstart Immigration Team — International Travel Toolkit</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ══════════════════════════════════════
+   UPSTART IMMIGRATION TEAM BRAND TOKENS
+   ══════════════════════════════════════ */
+:root {
+  --brand-dark:        #0C4F47;   /* header bg — dark teal */
+  --brand-teal:        #009BA8;   /* primary teal — badges, accents */
+  --brand-teal-mid:    #00B4BE;   /* lighter teal — hover, links */
+  --brand-teal-light:  #E6F5F6;   /* teal tint — card bgs */
+  --brand-navy:        #1A2B2B;   /* dark body text */
+  --brand-gray:        #4A5568;   /* secondary text */
+  --brand-gray-light:  #F7F8F9;   /* page bg / alt rows */
+  --brand-border:      #E2E8F0;   /* card borders */
+  --brand-white:       #FFFFFF;
+  --amber-bg:          #FFFBEB;   /* callout / warning bg */
+  --amber-border:      #F0B429;   /* callout border */
+  --amber-head:        #7A4E00;   /* callout heading text */
+  --amber-text:        #4A3000;   /* callout body text */
+  --red-bg:            #FEF2F2;
+  --red-border:        #FCA5A5;
+  --red-text:          #7F1D1D;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--brand-navy);
+  background: var(--brand-white);
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════ */
+.page-header {
+  background: var(--brand-dark);
+  padding: 32px 40px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle wave-pattern overlay */
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 20px
+  );
+  pointer-events: none;
+}
+
+.brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.logo-mark {
+  display: flex;
+  align-items: center;
+}
+
+.logo-mark img {
+  height: 44px;
+  display: block;
+}
+
+.brand-divider {
+  width: 1.5px;
+  height: 32px;
+  background: rgba(255,255,255,0.35);
+}
+
+.team-label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+}
+
+.page-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--brand-white);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.header-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.header-rule {
+  width: 48px;
+  height: 3px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════════════════
+   MAIN CONTENT WRAPPER
+   ══════════════════════════════════════ */
+.content {
+  padding: 32px 36px 0;
+}
+
+/* ══════════════════════════════════════
+   INTRO
+   ══════════════════════════════════════ */
+.intro {
+  text-align: center;
+  color: var(--brand-gray);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+
+/* ══════════════════════════════════════
+   NAV
+   ══════════════════════════════════════ */
+.nav {
+  background: var(--brand-gray-light);
+  border: 1px solid var(--brand-border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 32px;
+}
+
+.nav-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--brand-teal);
+  margin-bottom: 10px;
+}
+
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.nav-pills a {
+  background: var(--brand-white);
+  border: 1.5px solid var(--brand-teal);
+  color: var(--brand-teal);
+  text-decoration: none;
+  padding: 4px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-pills a:hover {
+  background: var(--brand-teal);
+  color: var(--brand-white);
+}
+
+/* ══════════════════════════════════════
+   SECTION HEADERS
+   ══════════════════════════════════════ */
+.section-head {
+  margin: 36px 0 16px;
+  scroll-margin-top: 16px;
+}
+
+.section-tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: var(--brand-teal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.section-tag::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--brand-border);
+}
+
+.section-head h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--brand-navy);
+  line-height: 1.25;
+}
+
+.section-dash {
+  width: 28px;
+  height: 3px;
+  background: var(--brand-teal);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* ══════════════════════════════════════
+   STEP CARDS (START HERE)
+   ══════════════════════════════════════ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 16px 0 8px;
+}
+
+.step-card {
+  background: var(--brand-white);
+  border: 1.5px solid var(--brand-border);
+  border-radius: 12px;
+  padding: 18px 16px;
+  position: relative;
+}
+
+.step-num {
+  width: 30px;
+  height: 30px;
+  background: var(--brand-teal);
+  color: var(--brand-white);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.step-card h3 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.card-dash {
+  width: 22px;
+  height: 2.5px;
+  background: var(--brand-teal);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 13px;
+  color: var(--brand-gray);
+  line-height: 1.6;
+}
+
+.step-card a {
+  color: var(--brand-teal);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ══════════════════════════════════════
+   CALLOUT / ALERT BOXES
+   ══════════════════════════════════════ */
+.callout {
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 14px 0;
+  font-size: 13.5px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.callout-icon {
+  font-size: 17px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.callout-amber {
+  background: var(--amber-bg);
+  border: 1.5px solid var(--amber-border);
+}
+
+.callout-amber .callout-head {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--amber-head);
+  margin-bottom: 5px;
+}
+
+.callout-amber p, .callout-amber li {
+  color: var(--amber-text);
+}
+
+.callout-teal {
+  background: var(--brand-teal-light);
+  border: 1.5px solid #99DDE3;
+}
+
+.callout-red {
+  background: var(--red-bg);
+  border: 1.5px solid var(--red-border);
+}
+
+.callout-red .callout-head {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--red-text);
+  margin-bottom: 5px;
+}
+
+.callout-red p, .callout-red li {
+  color: var(--red-text);
+}
+
+/* ══════════════════════════════════════
+   TABLES
+   ══════════════════════════════════════ */
+.tbl-wrap { overflow-x: auto; margin: 12px 0 20px; }
+
+.status-bar {
+  background: var(--brand-navy);
+  color: var(--brand-white);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px 8px 0 0;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  border: 1.5px solid var(--brand-border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+thead tr {
+  background: var(--brand-teal);
+  color: var(--brand-white);
+}
+
+thead th {
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12.5px;
+}
+
+tbody tr:nth-child(odd)  { background: var(--brand-white); }
+tbody tr:nth-child(even) { background: var(--brand-teal-light); }
+
+tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--brand-border);
+  vertical-align: top;
+}
+
+tbody tr:last-child td { border-bottom: none; }
+
+tbody td:first-child {
+  font-weight: 700;
+  color: var(--brand-teal);
+  width: 26%;
+}
+
+/* for tables without status bars */
+table.standalone {
+  border: 1.5px solid var(--brand-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ══════════════════════════════════════
+   PRO TIP / NOTE CHIP
+   ══════════════════════════════════════ */
+.note {
+  background: var(--amber-bg);
+  border: 1px solid var(--amber-border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  color: var(--amber-text);
+  margin: 8px 0 2px;
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+}
+
+/* ══════════════════════════════════════
+   Q&A LISTS (SECONDARY INSPECTION)
+   ══════════════════════════════════════ */
+.qa-group {
+  margin: 8px 0 14px;
+}
+
+.qa-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--brand-white);
+  background: var(--brand-teal);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.qa-group ul {
+  list-style: none;
+  padding: 0;
+  border: 1.5px solid var(--brand-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.qa-group ul li {
+  padding: 9px 16px 9px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--brand-border);
+  font-size: 13.5px;
+  color: var(--brand-navy);
+  background: var(--brand-white);
+}
+
+.qa-group ul li:nth-child(even) {
+  background: var(--brand-teal-light);
+}
+
+.qa-group ul li:last-child {
+  border-bottom: none;
+}
+
+.qa-group ul li::before {
+  content: "›";
+  position: absolute;
+  left: 10px;
+  color: var(--brand-teal);
+  font-weight: 800;
+  font-size: 16px;
+  top: 7px;
+}
+
+/* ══════════════════════════════════════
+   BULLET LISTS
+   ══════════════════════════════════════ */
+ul.blist {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+ul.blist li {
+  margin-bottom: 6px;
+  color: var(--brand-gray);
+}
+
+ul.blist li strong { color: var(--brand-navy); }
+
+/* ══════════════════════════════════════
+   DIVIDER
+   ══════════════════════════════════════ */
+.divider {
+  border: none;
+  border-top: 1px solid var(--brand-border);
+  margin: 32px 0;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════ */
+.page-footer {
+  margin: 40px 0 0;
+  border-top: 2px solid var(--brand-border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--brand-gray-light);
+  border-radius: 0 0 0 0;
+}
+
+.footer-left {
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-right: 1px solid var(--brand-border);
+}
+
+.q-circle {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background: var(--brand-teal);
+  color: var(--brand-white);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: var(--brand-teal);
+  margin-bottom: 7px;
+}
+
+.footer-left p {
+  font-size: 13px;
+  color: var(--brand-gray);
+}
+
+.footer-left a {
+  color: var(--brand-teal);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-right {
+  padding: 24px 28px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 4px;
+}
+
+.footer-right ul li {
+  font-size: 13px;
+  color: var(--brand-gray);
+  padding: 4px 0 4px 16px;
+  position: relative;
+}
+
+.footer-right ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--brand-teal);
+  font-size: 16px;
+  top: 1px;
+}
+
+/* ══════════════════════════════════════
+   MISC
+   ══════════════════════════════════════ */
+a { color: var(--brand-teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { color: var(--brand-navy); }
+em { font-style: italic; }
+
+p { color: var(--brand-gray); }
+
+</style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<div class="page-header">
+  <div class="brand-bar">
+    <div class="logo-mark">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvAAAACJCAYAAABKFAxaAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAB8ASURBVHgB7d39ddRIFgXwa878v2wEIyIAIhgRwTARrIgAJoJpIrCJwD0RABFYRICJwDUR4IlAW8/1CsvGH92tV1JV6f7O0doDrK3WR+nqVal0BJpkGIbGf3mqy5g7OjpyoCr4/dzCTtXHht9WL/Dz+XCoS7+tzkFEREQ/HIF2pmH9tV+e+6X1S7PD/03Ch/PLF/neh5EeVBTd7xew88YfB1tUym+vM4Tzw0Lvt9UrEBER0Q+/gB7kw4hUEt/6pcNugf22F7q81p/n/JfeLx9YWSQiIiKifT0B3UmGTGgl8btfNjgsvN+lQbgZ+Co/3y8diIiIiIh2xAB/iwyX0OBuOQzgPq1fTv3vu9Bxw0RERERED2KAH/EhWobKfEX64H5bg1CRP9Xx1kRERPfSYpMZEJGcV91g5wwJMcDjRtX9BHazZxyi88vZwGo8EREREd1j9QFew/Icw2V21SBU49+BiIiIiOiWVQd4H5L/hxDeG+Tn2K/fXyAiIiIiGlntNJIa3rfI20aGJh4dHb0HERERERFWWoEvJLxHG1biiYiIiChaXYAvLLxHDPFEREREdGVVAb7Q8B4xxBMRERHRegJ84eE9YognIiIiWrlVBPhKwnvEEE9ERES0YtUH+MrCe8QQT0RERLRSVQf4SsN7xBBPREREtELVBvjKw3vEEE9ERES0MlUG+JWE94ghnoiIiGhFqgvwKwvvEUM8ERER0UpUFeBXGt4jhngiIiKiFagmwK88vEcM8URERESVqyLAM7zfwBBPREREVLHiAzzD+50Y4omIiIgqVXSAZ3h/EEM8ERERUYWKDfA+nL7wX05AD2GIJyIiIqrMLyiQhvczvzwFPUZCPI6Ojt6DiLLkz1Fpy1q/NH75FaFta+75884v//jlXL735/Y56Aa/PRuE7dfoHzW3/onzy6Uusg0diPDjXBwvY/Lfl6P/vjqGePykoeex5D35GtvFSLb7n1ix4gI8w/tBGOJp1fRCYEUuHJeYQEOCtGW/++U17g/ru/wsWRcJ8Z/90q8t0Ou+bf3yG8I2fYE9SfsIvSHyyzf9vp+6nw+xx7G667+z/r37ulxiOz5kdMzIefgc1zd7d4X2XX6efInnoXz9ot+f5/bZI8v9bXUDo+1ih3Aut3h4Xzi/7Bzg9/i8/4Gdp6nOK9nmRygIw/tkG4b4/ekJeAE7b/x+2KJSfnvJOdrChoSoV5jIr5PsvwY2Dt5/fj1ahNDeIV075vzyyS8faq0M6jkpz0B1MA6yt5zr8tlvy0+YgfH5k4P3ftttsJBR79b4Bm/ODHF1M4hwDPXIhHGb+GrKZ9N2UYb7tnv836Tn7Nmu/3jQu6yKvCqmAs/wboKVeKIFHHiBOlTjl3ey+N/bIwT5WcJnajNvRxEDX6fXf9mOn2u+Aa+BHiexittiWfEYkvPRIYT59xx2s8j5XJUiHmJleDfFB1uJZiKVYq2oLlVVbf3yUaptfulQKLnQL7wdIxnudOrX5btfTjWAUAb0GPlLK8tynGyQXzBsEHqN5Hw8K/mcnCKDdrEK2Qd4hvckGOKJEvPn2Fv/5SvyuEA1CMHzNOFYZ3N6of+I/C70cayuhLCvaw1iS5PhMX55NwqDG6QdUmWpRTgnv5Z0Tk6l03/n0i4WLesAz/CeFEM8UQIaKqTdOkF+bVeHUP3L/tz36yjVbrnQv0be5Dp1WnovR0m02n6K8GzSMcoOg3L8XOjNddVZx38+2VdbMNOZyDbAM7zPgiGeyJC2WyVUlzY5V/60XZLKe0ntfwMG+aRuDb3oUFc+6PxSZTVeixpyw/UOZCbLAM/wPiuGeCIDOh5a2q0GZbhqZ3Mbx61Vug3K1eA6yO89pSU9qEHdQy8ahGp8NUFXexXiDRcZyi7AM7wvgiGeaAId11liu9UghPgszn8N77WElwaholrUcwc506kKHep3XNE1WSrvvJFNIKsAz/C+KIZ4ogNoeN+ibIuf//r7a+xi78BrmqW/sQ7FX5N1/XN/hqVY2QR4hvcsMMQT7UHbrS3qsNj5r2PGN6jTdm1vx02sx3psSh1Oo7NwbUDJZBHgGd6zwhBPtAMdFvERdZn9/NftWHObwxfnGdJhND3W4zi351Qeo+f0CSipxQM8w3uWGOKJHjB6MKtBfTY6LGgu0tY0qNMHvnEziS9Yl9KmmDwDJbdogGd4zxpDPNH95GHLBvU6mWMGFa3UdaiTA6uQqWyxLg0K6aXS3NCAkvsFC2F4L4KEeOmyZBcw0TWpTreom7TLH/35/9Kf/5dIJ3UocX651GWsQfqQ8Z7V9zRku/pjs8e63uYpb5z9rEOIsqQ35BvQLBYJ8A+Ed2lk5WGfb/o1NrxO/74ZfZXluX7lFEXpMMQT3dQiDXfrv59i2QJHg9DT8AYJJKq+y/VCZin55Jfzx24+9FokS+uX32AX6p3/3VtQSjKMpsW6yA1vj3yx135Gswf4O8J7j3Ai9rfvLLWBl3/XjP7Y3fPvWr/8Dk5ZlAJDPJGtHqFQIV/P76vU6rjXGDIlYLaYN9R3WvX7BHvWs2tI+3SyT4+Bzg4jy1b+e3QtmdrLwrYyPRmelCIwOv16u+cm3lA3WE4rD7TmWIWvfDhclo4wo1F4F3JB+DseiPp3LcJFSr5vHvlxsVp/I/yPGmCOw7K3WWOI12PqAnbe1Fyd01edt7Ah5/YrTCRvxcTy7YG0WR+wZ8i8TadcnHMYj6zrM+uhNIb7xPnlD+upGidcSyYdszrjSLPDP5UweQw7SXpaEG5QTfdNNKGtcbju7Y/fX+465GnhG+sc20RZH2mTOsxHirnPdv3H2m7uokX4LBbkuPqANHrMRQK6X7775SQ+TS1f5YEHfeX0VPKzT4fRdEuyw4x+Nl1bXReZ/8zNYKtDxfznOxvsmMxmMCzbDkjbJONXTS/wQ2hTz4Z5bGBosD2n5njYViqfZzuuT4MZGG/DAQUawnm1i4shZA/JBEmC9hCOke0wjxYTDbZtYjfMz7KoNt4ulp8l6Ww8s8xCM4QGVoKfPBAl3aYv9IN9R3jgocF0clJ2CK8Fv5CdIFVOvUNjd6adzcDZaYh2JdUXqV5PqrrfRaqaWomTyqlDWn8NtsHUKnS/n+MlSdLDq9taricPvQl0ywdXZ7V94O96hGu/nH+yvNNMYHoeRnqMdHj8GLHwGnmZ42F0Oc9l5MZWlxTD+mhsCFWCTr/fp4ph4WL0u5uB1XhLqwnxAyvwexlYgR/097WYyRCO0a9DWqcwMoRqqIUGCxjC9t4uuT4DK/BXhpvtjfR2bYaFjotb65VyBMB3TDTkm4fiaArZflLsnfOZH1bgo9GGd/pBLMfG7qJBeAHC1YVHq/GpxiOtDSvxRHeTStGrOR80k6qvX14ibfsmF7YGNp5jun6pardu785/K9vc6R9z2shlfEaotss591+/bHLYD/qck/TaONiT4cct6hGfD4r78I32ljw6k9SapR5CIwH+LeYP7rd1CENrXugQHg6pscEQT3RTDO8OC5ihfetgw6Kq5rAwDRhSGJJhTFvQ7HR42qw3zLvSdiBViM9tGM0hJJzHYU7vctyHOUsW4PXuUIK79VRhh2r8Il3McpBs/Pd/giwwxBMFMbwvWjHS9i1VJf6tUZf2rN3iqWm10IHollGIt24XfkPZ4vNBG1bZD5MkwPsGXqa2kvDeID/HEjjlrh3pps1aG4Z4WjuHMJVhFhcircT3sBcnC8hBA6ICaIi37hmbfXy4EQed0ITBfRrTAD+Eh2pyqrrfZ6MhfgsOp7HCEE9rttiwmQdIgSLFBfJ35KHUAEMrpEXDHrYalEVmjnk5x8xRa2AW4PXhpqXHuu8jhvgNGOKtMMTTGr3PcfiErlOKXsY2k+As68D2hkpiPbStRTk++DYpm17KGpgE+OH6DasNyiKB838M8aYY4mlNnLYfWfLrJhWvHvY65EFe5GP11kSipPR8tAywDcrwXof1kaHJAb7g8B5tGeLNMcTTWpTwMHyKdm3qMBrLLvQt2xsqiOVLnhrk71PORY6STQrwo/Be+jhEhnh7DPFUu14ralnTqdl62Jr6JtV/YEvam7Mhgxf4ED3C8ub1V+TNgZOFJHNwgK8ovEcM8fYY4qlmJbUT1us69UUyKR5ia/1yMYS3ODYgylMPO7nnr8Wn1a3ZQQG+wvAeMcTbY4inGrmSXjqi62odmqdU4Xuk0+E6yLcgyojxA+8N8pXlw/012TvAVxzeI4Z4ewzxVJtUL0pK6TNsPceB9MKeeiq5DuEN3BLmj1mVp4w41C3rh/tr8cs+/3gF4T2SEH/1RkP5Ck5VZmGj25Q3RVSDHuWR8fqWbdnUcfCfDX7GLhqEd5PIjDVy0yAPEX5idXC99GZOjj3JMvJ9HEvePPB/uxwt/yKEcFkuOa/5T3idn8HOAX5F4T1iiLfHEE81cCVesGWd/fkn4cOqDW8wzYlf3mLea8oLXY41zPd++ZsBrF76zoLXCD1GLcJxa3rMaUZwusix9EW+PnCT6FDvm4SdviSTEtspwK8wvEcM8fYY4ql0PcolVW+redPlQdbm0Eq2PNzm//8yFGmpdjWGeanMO1yH+R5UNA3tcnPYYr6XHTW6tNC30etxJYFezrt+Jb0+vLbP5NEx8CsO7xHHxNvjmHgq2TeUy7rS3GAaqcI7LK/BzTHzp3rto4LIQ8synaj/9rtfNlj+TaUNQvX/FOHB6q/yPAbqzVPSw/cJNIsHA7yOE/uI9Yb3iCHe3oZvUKRClTzcwsFWgwl0irnc5okuEML8Vw3zHR+AzZvuowuEYmOLfF31+GCeZz+W8InTRs7n3gCvDVbJb1i1xhBvb8sqFxWo5ACf3brrkJVc29QG19VTVuUzM6q4yz5qQEuznumKHvBQBV6GODSgMYZ4ex91vGK2EoxbXHuP1j4cMlN4hcl63RsY0DbV8hXzKXQIVfkzzi+/PB2KknvFfVVKeDN1Te4M8P7EkIc/OtBdGOJtNQjVkzWpPcDX/PkcCpbzzYdftw5lzK/fIoyVP+PQmvnJNpex5NAHRSkbPWhWPwV4bZA2oIcwxNt67bfna6zHr6ibZYD/F2TNwY7pzZpvUyWUldKmtrgeWtOAkhsN7eVQpvx8Ac3qrgq8DJ1hF//jGOJtHWc+lMbBzn9RtwZ2+EBU3v4DY9qm/oFyejs6hIr8mooQs+NzednrQbO6EeD1BOlAu2KIt9NgPV2i1VbgE9yEMcCvkI6lfYX8x8VHDcLzPJweNwGG9yKU/HB/kW5X4Nn47I8h3s7bjKvwDnYa1Mu6a9uBrDWw8w8SkYfHdVz8S5RzHMj0uGt7pmcODO95u+T0kfP78SZWVt8n4RtbbUh47xBe7pIby6Ay6Q2Wmau9As/hhTPz54lU9p7JXN8Ib5FtkbdOp5t8xVAznfZqNJjfpS7ujr97qksDEqy+L+CX0fd8onsahngbvyPPAG99IZYLvEN9WtjK7cIgN19PSw1mJT9s6bf5FqGdbRFu9HN+EZyc3zLNYW4vqSrKjJNqOIQ5zM91cbue49pr3IyW3/Trmh605WQDCxgH+N9Bh5CTXMZpykl/VaVliJ+kzbQ67WCrRZ2vnH4OO7l2y8oFu9TKagNbDjPTFz/1vp3YIJxHuVblpRIvQZBDKw93hnTkHJZpS3s9pg6ibVQM/uJHAUpvNiXIS75qUS9W4BdwNQZeu/sa0L4kgD2Tqc+kOjRuBDgmfpLXyI+DLcugmxPLqpNDnlqUy3oIkMNCdIy8tLvysOszhGp3j7xs+NKnw+iQqQb2JHDLtVmu3Zsp4f0x8rP9cqLHqMw+JsdojYUbWkB8iLUF7etvf1L+8VCFkCH+YDn2BllXGNrc30C7Lw0qlp8p2QOSE5XcNd7CVhY9EfeEeQlKOazfMegQKYZISTv+UoP7rMeG/D49RmWK1NpygQPNLgZ4Dp/Zz986O8KjGOIPkl1A0iE91g1+jj0NU1h/nh55Krn3xHrdHTIzCvNSYJGqZ5yO0mEZL7SaTDvSse8tbEl4f1Xp5AG0QjHAr+lhi6l2Du8RQ/zenuqwrtxYV+FzfgjvENaFgFzHVRbZe6Lr3MJOEVPH6TCGzi9SmZcpKf/E/MfWW9A+rIsBDpwViCrzRBv1qrryE9o7vEcM8XvLMcB/g61qhtHo8JkGtnJ+MKrE3pMWtop7cE2mpNQxyRLkJdBLmHdI7wXHwu/FuhjA8J6WA81OKvCsvu/m4PAeMcTvpUF+eth7hzpY9yb0mV9wS+w9sQ5F1je0s9KhNiejynzqt77WNmQuiQQ9Re85bIZqJAGe1ffHTQ7vEUP8zn5FfnrYy/ntsztJ9BK43MNhUb0nuq5reUZhb1qZ7xCq8qmCPJ812411UXELogoxwD/OLLxHDPFl0opwD1ty/pVehU/xvoNPyF9J+03Cu3VbX9wQmsdoVb5DCPLWn6+pbeapRCwDfM/qO9XqCegh5uE9Yogv1hfYe1vqGzITVd9dyrmZDZXUe2J9k3VeczDSIC/Daqzb6Ab0mAZ2UrTXFmp9DwjNiAH+fsnCe8QQX6Qt7EkIPEWZUrwpsUcZZL9l/7blRC/Eqa76fhdtoz/ATgN6jOXwyVyP0wZEEzHA3y15eI8Y4suiVcce9mRMdVFDafz6SnhtYC/1w4SW3mU65ekV7SFJcZNR0j6aagO7d0Bk22OTUW+S5Xpk9yC8bmdOHkKTSYDn1Eo3zRbeI4b4O/2LfKXqlj3OOQyO6ZR4G9grZfjM2GnGQ2lS3GSVuI8Ops++WFbhc8Xx+fPgbERkQgK8A0Wzh/eIIf4nOd9YniDd+p3lPh5e1+8j0iixsjM3XdkNpdGhMx3s9TBWwI1rDyIbtb3Aj+7XICEG+GuLhfeIIf6GbMfYJpqNJpIqWLYhXtdLxr2nqtZtUaZ3OqQoC7qfjpGGaTU6HlP+a849GQ71q3FYR4OM6LHegtYi6cxTTzSMOKzb4uE9Yoj/wSFvKbvUG798ze3Njbo+X5HuorgtfGaTjd9Gi1fXEt9kyewz1jfXcqMh69ohw+NeWW1Lh3y1yINl72ZuNyWpei4pX8mOwfgQ6ypmFLhHNuE9YojHZYKQYErHAPdIJ1bis6jq+vWQkJWy8i5qOOa3S+6zUXhvkIZ19b3DzTHBDa6r8Q3yYXXcm4XTBDe7uQztsHz+KZvhKtou8OHV9Un2zEMM8LnOlZpaduE9WnmIL+WGco79I1Xdi6XCjFRD/SJV93dIq/Tq+9hmiRCvleuU4V0eXt3CyCMz5HQIQb5DHqyCoEO+nvrtncMDlpbt/9McenT0GY8NqATWz7f9L9UwmhjgP2F9sg3v0YpDfBEPMmoVfo5zp/HLxZxVSQ3uEgZlmaNqVNtxLiH+64z76y3ShndhvY8emyFH/u5Ub2A7LKvFdE6HrFpysHWcQc+Hg61Fn63Q8J7ifRmUhoOtZO95uQrwCee2zlX24T1aaYjvUY4/Md+MOR1CkL+qTFpfaOUiJ3PRj4J7i3m8r6j6PiYX7ouU1fjRjdYJ0rKuvnfYfYacBgsGecP3HXyDPeu2p/HLR4u2JR6bB1TArXtgGyw0S9SoVyzXh7PpZymu56+trgPSSybFvNt/KBWjNdiiQMN69k9xlYohhN7FttcQjg25WO51kfD/Xp6Ql8bgWH/OEi4wgyGEvyVdDIY3XcN1OJpLByNDOO4uhsNdDGFbJg9F/nf8NdjpYMz/zO2QxsUh6zuEfXtVBBj9rBZ7GtKcr7OG+CG0q8nhQIPtNm5REf95vg9pSK/s3j3aQ2jvj0frdXXdPBr9A2kM5Q9rvlMspvJ+F7+PNijg1e0TvbGs9M1lCDceLZYXZ5W6HC3RU12a0fdLezZH9V0bvAZ52Prls1/6fYZU6EXyN4SHouZ8GE6eT3gDI0OoHnWYTradDGH72/rFUno9lLbW8tkP82N9hmuCQ+gR/YKb7YpocN2WPEdo/5o7fsarffeP/1zSo/QW9rZ++TPBUKYf9DyVh/5nOUf9ZznCAYzbxFdHFb3cbQjPfaXcf9LL1COcV/GaLcbX6Oe6Di/w87VaekSf3djxQ6hO1/qSgaLDe1R5iL86KFGgIVRW5aRnV+nu3usQseQyC/Bj0pA7hOEVt2+4Gr/8B/c34nNwCBdnBwNDqOqmGA/qcH1B7A9dXw3uEhwluFtub1mnVzA2hIdOc5+a8JAA3yLduHGH0PZsYUjXWa7NLWbEAG+vgCx8Z4BvEKrwtakivEcVh/giq+9RwnBSo09+X/+BmWQc4HNndk4O6ae4HMIIN0ff9HtZbt8gCQnpcnMUq10t0kjStukNx3fk7aBwN0OvpkN4vmzKDV+L0CtmfcO3MwZ4ewVcy38O8CJh19VSqgrvUYUhvtjq+9hKhjlN5fzyMmU39m0M8Acx7SExHDpTmqRtW0bD9+5zaIDvMF+IOsf1DV98iNaN/n489PChoQ2zY4C3V8CN8VWb8ssdf7FB6DqoYShAleFdyIV1CM+v1BIW/0QFdL80qHco2lQOobGfLbwnIMeqFDka1OvcOLx3WGd4F6lnEZNhQy0qIz0Wg90MQI+JgZxIjr1Lf+z1yPy8enL7D/TCavbA0oKqDe9RRVNMfvCf5RMqocddEXPZz8zBcDz1gqSNfIX5pg+dm/OL9fCmtd7Qmk6/eY8T1KuGLEJl+ozMPbnrDzVMmb4ye2bVh/eoghDvUOEb6hjif+JQR3i/op9jtjH8M3JIs58kiJ1jfcwfXL1Ni249KqTDMmprR9d4HpRoi8yLNE8e+LsNyjzQVhPeo4JD/FUls/DhFPfS47DkG2ErDhWF90jDRU0VQodE+0l+pl9eYl0vpXs/4zFf83aVB0Qd6uBQ541/dTSXZH39vjfA68rLgeZQjtWF96jQEP+mtlB3m/98cvFZU2i5rUd4YNWhQjo8ooYQ7zDDTZa2U89QTyC7z4ejmaZIFXozWc0wxDHNIjUMWXOosJBRORmelu1x91AFPnYTy4njkL/VhveosBD/pqZx7w/R/VLKeWRJXphSbQ9LVECI7zHjTZZW4yXES1tV47Hxt964z02OwVp7Mx3KDvEODO/Fyf2Z0CeP/YNCQvzqw3tUSIh/c1TwfO+H0AqZnEdrGBfvEC5WNT9cd4MezzJExKEsH5a6ydK2SrZZTefEYteiUa95lfznkyG9JYb4HhX3QtYu52dCHw3wIvMQ/57h/Sa9MEpDnltDJ+vzcm3hPdLKY4dwR+9QH9m/cvP48qiiOYF3NQoYDvlzCDdZS1SKfxidE1KRLz3IL34t0vOuiil776LnWEk3yovdIJMdbSeza592CvBi1O2Zy53IVbVhznGGJdG7xpwauh4h2K3+CXy5gRkNIXCowxZh/27WfLG6NTwkV9KGZ3WTVXiQdwg3QxtkQHu+qn3uRguKuffcOGRwg0x2cpxZbucAH+kBuXQFsUe4AK1iDPWhMgkTEubiWGgH+mE0Nr7UIC/7duuXZ/6zvOH+vZbpw5o9NFTkepN1R5B3yFe2PU6jXliHZV0iQU+wHL+Z9mauuheydnrM5XBzPO2cklfNymvjh3ld+KUF7U3eDiqv3B7mdTaEt5LSDvy26ob599Ehvg/h3H+KQgyh7bDS7fm7O+Pfv6+zoeB2U7ffxyEfcvyfDAW0bUNo97fD/GZtI/R3XQzLOh12PCYGQzjQYLu9WqzIEM6ri2F+cl7Z9eoM1w3ExZDO2bDnRZPu5rdjO6QPiWcDb7QONoRz6p1fvg75iKGlRYGGBQP8aB0kiM61T4veX3cZwnkRw/z3YX6y74q6cY2G+YL8xZLbaJj/ZvmgG5XBEA40MMBPNsx3vJ355fXt338EQ0O4sMkrs1tMJ10E0oX6iV1R9oZQKZA7ud/90mC63i9f/HLCB3bs6H5qdXnulxeYR3y7o+zTvvRnF6SRhc1xLibNojQ6936D7f6M+0xeAf6p9vNQQ4MscTumCI09rs+BHoUbtSdW12nRI7Nt5D+nHA8d7M8xMTmb+PXbwMihz14MoZJrdc5s1zyEMsHxJseYXHOlLd/e15abBvhoCHejLW6GjscOFIewwtIQnDO0z0cPvhbh4Gvw+AEoB5ND2F/fEBoyB0pOz60XujQI51f8s0O40fJNv57Xtj9zCvBjo0Al+2/XtlLcPgdX32ZqO9bgels+1f9+ioe3aRynLdvyH1xv1/Oab4LuaUuA+8+TeMwVtY30HIvXOPmMDXZvCxzC577KJQg3KQ5E9xgdb7L8isfbIKfLv7g+p3YqmCUJ8HfRxiI2qNFVw8kTIj96EN4+6Jz8D/dXvu7Zb2NOv16uqack1wB/H92PzR1/5bCyfWdldA2KuB1X7IG2krmEiIgoB0MGY+CJiIis7D2NJBERERERLYcBnoiIiIioIAzwREREREQFYYAnIiIiIioIAzwRERERUUEY4ImIiIiICsIAT0RERERUEAZ4IiIiIqKCMMATERERERWEAZ6IiIiIqCAM8EREREREBWGAJyIiIiIqCAM8EREREVFBGOCJiIiIiArCAE9EREREVBAGeCIiIiKigjDAExEREREVhAGeiIiIiKggDPBERERERAVhgCciIiIiKggDPBERERFRQX4BEVH9HOxcgoiIaEH/B8dMIuVz61f+AAAAAElFTkSuQmCC" alt="Upstart">
+    </div>
+    <div class="brand-divider"></div>
+    <div class="team-label">Immigration Team</div>
+  </div>
+  <h1>International Travel Toolkit</h1>
+  <p class="header-sub">Everything you need to travel internationally with confidence.</p>
+  <div class="header-rule"></div>
+</div>
+
+<!-- ══════════ MAIN CONTENT ══════════ -->
+<div class="content">
+
+  <!-- Intro -->
+  <p class="intro">This is your complete guide to international travel as a foreign national at Upstart — from pre-travel planning through reentry. Travel policies are fluid and can change at a moment's notice. Always request prevailing guidance closer to your departure date.</p>
+
+  <!-- Nav -->
+  <div class="nav">
+    <div class="nav-label">Jump to section</div>
+    <div class="nav-pills">
+      <a href="#start-here">🚨 Start Here</a>
+      <a href="#travel-considerations">📋 Travel Considerations</a>
+      <a href="#doc-checklists">🧳 Document Checklists</a>
+      <a href="#visa-stamping">🏛 Visa Stamping Tips</a>
+      <a href="#cbp-inspection">🛃 CBP Inspection</a>
+      <a href="#secondary-inspection">🔍 Secondary Inspection</a>
+      <a href="#dos-updates">🌐 DOS Updates</a>
+      <a href="#after-return">🔁 After Returning</a>
+    </div>
+  </div>
+
+  <!-- ══════════ SECTION 1: START HERE ══════════ -->
+  <div class="section-head" id="start-here">
+    <div class="section-tag">Step-by-Step</div>
+    <h2>🚨 Start Here — Before You Book Anything</h2>
+    <div class="section-dash"></div>
+  </div>
+
+  <p style="margin-bottom:16px;">If you intend to travel outside the U.S., complete all three steps below at the very start of your planning process — before booking flights or accommodations.</p>
+
+  <div class="card-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>Submit Your Travel Ticket in Jira</h3>
+      <div class="card-dash"></div>
+      <p>Complete the <a href="https://upstartnetwork.atlassian.net/servicedesk/customer/portal/2103/group/3947/create/7141" target="_blank"><strong>Global Travel Form</strong></a> in Jira before finalizing any plans. This gives the Immigration Team visibility to support you and flag risks early. <em>Do this first.</em></p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>Read This Toolkit in Full</h3>
+      <div class="card-dash"></div>
+      <p>Review all sections well in advance of travel. Policies can change without notice — request updated guidance from the Immigration Team closer to your departure date.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3>Stay in Close Contact</h3>
+      <div class="card-dash"></div>
+      <p>If anything changes — dates, destination, visa status, passport issues, or role changes — notify the Immigration Team immediately.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════ SECTION 2: TRAVEL CONSIDERATIONS ══════════ -->
+  <div class="section-head" id="travel-considerations">
+    <div class="section-tag">Overview</div>
+    <h2>📋 Travel Considerations</h2>
+    <div class="section-dash"></div>
+  </div>
+
+  <p>We understand that many international travelers are apprehensive about entering the United States due to increased scrutiny at ports of entry and land crossings. If you need to travel, it is critical to carry the right documents for your visa classification and to be prepared for the possibility of additional screening or delays during reentry.</p>
+  <p style="margin-top:10px;">International travel is still permissible. Preparation is your best protection.</p>
+
+  <div class="callout callout-amber" style="margin-top:16px;">
+    <span class="callout-icon">⚠️</span>
+    <div>
+      <div class="callout-head">Consult CIP Early</div>
+      <p>Travel guidelines and restrictions can change without notice. Reach out to Corporate Immigration Partners (CIP) and the Upstart Immigration Team well in advance of solidifying any travel plans — ideally with at least <strong>30 calendar days' notice</strong>.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════ SECTION 3: DOCUMENT CHECKLISTS ══════════ -->
+  <div class="section-head" id="doc-checklists">
+    <div class="section-tag">Documents</div>
+    <h2>🧳 Document Checklists by Immigration Status</h2>
+    <div class="section-dash"></div>
+  </div>
+
+  <p>Use the checklist that matches your current immigration status. Reference it <strong>three times</strong>: while planning, right before departing the U.S., and right before returning.</p>
+
+  <!-- H-1B / TN / E-3 / O-1 -->
+  <div class="status-bar">🌍 H-1B | TN | E-3 | O-1 Employees</div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Document</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Unexpired Passport</td>
+        <td>
+          Should be valid <strong>at least 6 months beyond your reentry date</strong> and ideally through the end of your full work authorization period.
+          <div class="callout callout-red" style="margin:8px 0 2px; padding:9px 12px; border-radius:6px;">
+            <span>🚨</span>
+            <div><strong>Why this matters:</strong> If your passport expires before your work authorization, CBP will limit your I-94 to your passport expiration date — and that shortened date becomes your new status expiration.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Valid Visa Stamp<br><em>(unless Canadian citizen)</em></td>
+        <td>
+          If your visa stamp is expired, you must obtain a new visa stamp before returning to the U.S.
+          <div class="callout callout-amber" style="margin:8px 0 2px; padding:9px 12px; border-radius:6px;">
+            <span>⚠️</span>
+            <div><strong>Tip:</strong> Schedule your visa appointment <em>before</em> departing the U.S., aiming for it to take place within 5 calendar days of arriving abroad. This allows enough time for approval and return of your visa-stamped passport.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Original I-797 Approval Notice</td>
+        <td>
+          Original top and bottom portions of your I-797 approval notice.
+          <div class="note">💡 <strong>Note for Canadian TN holders and E-1/E-2 visa holders:</strong> If you obtained your status at a U.S. port of entry (not via USCIS I-129), you will have a CBP-issued I-94 rather than an I-797. Carry your most recent I-94 printout and your TN support letter or E visa documentation in lieu of an I-797. Contact the Immigration Team if unsure.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>Photocopy of Entire I-129 Petition</td>
+        <td>
+          Download from the Envoy Global platform.
+          <div class="note">💡 <strong>Pro tip:</strong> Print double-sided!</div>
+        </td>
+      </tr>
+      <tr>
+        <td>3 Most Recent Paystubs</td>
+        <td>Download from Workday.</td>
+      </tr>
+      <tr>
+        <td>Employment Verification Letter</td>
+        <td>Request via <strong>The Work Number</strong>. Useful as supporting documentation at consular appointments and at CBP inspection, particularly given current heightened scrutiny of employment arrangements.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- F-1 OPT / STEM -->
+  <div class="status-bar">🌍 F-1 Employees (Initial OPT or STEM OPT)</div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Document</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Unexpired Passport</td>
+        <td>
+          Should be valid <strong>at least 6 months beyond your reentry date</strong> and ideally through the full work authorization period.
+          <div class="callout callout-red" style="margin:8px 0 2px; padding:9px 12px; border-radius:6px;">
+            <span>🚨</span>
+            <div><strong>Why this matters:</strong> If your passport expires before your work authorization, CBP will limit your I-94 to your passport expiration date — and that shortened date becomes your new status expiration.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Valid Visa Stamp<br><em>(unless Canadian citizen)</em></td>
+        <td>
+          If your visa stamp is expired, you must obtain a new visa stamp before returning to the U.S.
+          <div class="callout callout-amber" style="margin:8px 0 2px; padding:9px 12px; border-radius:6px;">
+            <span>⚠️</span>
+            <div><strong>Tip:</strong> Schedule your visa appointment before departing the U.S., aiming for it to take place within 5 calendar days of arriving abroad.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Properly Endorsed Form I-20</td>
+        <td>
+          <div class="callout callout-red" style="margin:0; padding:9px 12px; border-radius:6px;">
+            <span>🚨</span>
+            <div><strong>Ensure your I-20 travel signature is current.</strong> Travel signatures are typically valid for 6 months (or 12 months for STEM OPT students in valid employment). If your signature has lapsed, contact your DSO before traveling.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Original EAD Card</td>
+        <td>
+          Carry your original EAD card. If your STEM OPT extension is pending, carry your <strong>receipt notice</strong>.
+          <div class="note">⚠️ <strong>Important:</strong> The receipt notice is only valid for travel if the STEM OPT extension was filed <em>before</em> your current OPT EAD expiration date (i.e., timely filed). If unsure, confirm with your DSO and the Immigration Team before traveling.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>3 Most Recent Paystubs</td>
+        <td>Download from Workday.</td>
+      </tr>
+      <tr>
+        <td>Employment Verification Letter</td>
+        <td>Request via <strong>The Work Number</strong>.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- Dependents -->
+  <div class="status-bar">🌍 Dependents Traveling Without the Employee</div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Document</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Unexpired Passport</td>
+        <td>
+          Should be valid <strong>at least 6 months beyond the reentry date</strong> and ideally through the full status period.
+          <div class="callout callout-red" style="margin:8px 0 2px; padding:9px 12px; border-radius:6px;">
+            <span>🚨</span>
+            <div><strong>Why this matters:</strong> If the passport expires before status expiration, CBP will limit the I-94 to the passport expiration date.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Valid Visa Stamp<br><em>(unless Canadian citizen)</em></td>
+        <td>
+          If the visa stamp is expired, a new stamp must be obtained before returning to the U.S.
+          <div class="callout callout-amber" style="margin:8px 0 2px; padding:9px 12px; border-radius:6px;">
+            <span>⚠️</span>
+            <div>Schedule the visa appointment before departing and aim for it to occur within 5 calendar days of arriving abroad.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>Original I-797 Approval Notice</td>
+        <td>Original top and bottom portions of the I-797 indicating dependent status (e.g., H-4, O-3).</td>
+      </tr>
+      <tr>
+        <td>Photocopy of Employee's Entire I-129 Petition</td>
+        <td>
+          Download from the Envoy Global platform.
+          <div class="note">💡 <strong>Pro tip:</strong> Print double-sided!</div>
+        </td>
+      </tr>
+      <tr>
+        <td>Employee's 3 Most Recent Paystubs</td>
+        <td>Download from Workday.</td>
+      </tr>
+      <tr>
+        <td>Employee's Employment Verification Letter</td>
+        <td>Request via <strong>The Work Number</strong>.</td>
+      </tr>
+      <tr>
+        <td>Proof of Relationship</td>
+        <td>Marriage certificate (for spouse) or birth certificate (for child).</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- I-485 / AP -->
+  <div class="status-bar">🌍 Employees with a Pending I-485 (Adjustment of Status)</div>
+  <div class="callout callout-red" style="margin-top:0; border-radius:0 0 8px 8px; border-top:none;">
+    <span class="callout-icon">🚨</span>
+    <div>
+      <div class="callout-head">Contact the Immigration Team immediately and well in advance of any travel if:</div>
+      <ul class="blist" style="margin-top:6px; color:#7F1D1D;">
+        <li>You are planning to travel using Advance Parole (AP)</li>
+        <li>Your passport is expiring soon</li>
+        <li>You have a pending Advance Parole renewal</li>
+      </ul>
+      <p style="margin-top:12px; color:#7F1D1D;"><strong>Critical rules for Advance Parole travel:</strong></p>
+      <ul class="blist" style="margin-top:6px; color:#7F1D1D;">
+        <li>You <strong>must have a valid, unexpired Advance Parole document in hand before you depart</strong> the U.S. Departing without a valid AP document will cause your pending AP application to be abandoned. Your I-485 and I-765 will remain pending, but without a valid AP you will have no immigration basis to re-enter the U.S.</li>
+        <li>If your AP expires while you are abroad, it cannot be used for re-entry. Contact CIP and the Immigration Team immediately if this occurs.</li>
+        <li>Carry all AP and I-485 supporting documentation when traveling.</li>
+        <li>AP travel may trigger additional scrutiny at reentry. Be prepared.</li>
+      </ul>
+      <p style="margin-top:12px; color:#7F1D1D;">📧 Contact: <a href="mailto:Upstart@immigrationlaw.com" style="color:#7F1D1D; font-weight:700;">Upstart@immigrationlaw.com</a> + <a href="mailto:immigration-team@upstart.com" style="color:#7F1D1D; font-weight:700;">immigration-team@upstart.com</a></p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════ SECTION 4: VISA STAMPING TIPS ══════════ -->
+  <div class="section-head" id="visa-stamping">
+    <div class="section-tag">Consular Guidance</div>
+    <h2>🏛 U.S. Consulate &amp; Visa Stamping Tips</h2>
+    <div class="section-dash"></div>
+  </div>
+
+  <ul class="blist">
+    <li><strong>Make your appointment before leaving the U.S.</strong> Visit <a href="https://usembassy.state.gov/" target="_blank">usembassy.state.gov</a> to locate the appropriate U.S. Embassy or Consulate and follow their procedures for scheduling.</li>
+    <li>The consulate webpage will provide instructions on forms to complete, fees, photograph requirements, and other application requirements specific to your visa category.</li>
+    <li><strong>Apply early.</strong> Allow time for PIMS verification and potential security clearance (221(g) administrative processing), which can add days or weeks.</li>
+    <li>Bring <strong>all original documents</strong> to your appointment.</li>
+    <li><strong>Never surrender</strong> your original I-797 approval notice at a consulate appointment.</li>
+  </ul>
+
+  <div class="callout callout-red" style="margin-top:16px;">
+    <span class="callout-icon">🚨</span>
+    <div>
+      <div class="callout-head">TCN Processing Restriction — Effective September 6, 2025</div>
+      <p>As of September 6, 2025, visa applications must be filed at a U.S. Embassy or Consulate in your <strong style="color:#7F1D1D;">country of nationality or residence</strong>. If you are abroad and need to apply at a third country consulate, contact CIP before scheduling — very limited emergency exceptions may apply at consular discretion and should not be relied upon.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════ SECTION 5: CBP INSPECTION ══════════ -->
+  <div class="section-head" id="cbp-inspection">
+    <div class="section-tag">At the Border</div>
+    <h2>🛃 CBP Inspection Guidance</h2>
+    <div class="section-dash"></div>
+  </div>
+
+  <p>If there is any uncertainty at any point during the inspection process, reach out to CIP and/or the Upstart Immigration Team. <strong>Save both contact details in your phone before you travel.</strong></p>
+
+  <div class="tbl-wrap" style="margin-top:14px;">
+  <table class="standalone">
+    <thead><tr><th style="width:26%;">Action</th><th>Guidance</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Review your social media presence</td>
+        <td>
+          <ul class="blist">
+            <li>It is recommended that you make all of your social media handles public before traveling. CBP may review public posts, and consular officers may request access during visa appointments (see <a href="#dos-updates">DOS Updates</a>).</li>
+            <li>Remove or archive anything that could be misread, including jokes or content implying unauthorized work, extended stays, political activity, or mixed travel intentions.</li>
+            <li>Be mindful that content related to criminal activity, drugs, or violence can lead to admission denials.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Double-check your job details before you go</td>
+        <td>
+          <ul class="blist">
+            <li>If anything about your role may change (location, job duties, salary, title), loop in CIP and the Upstart Immigration Team <em>before</em> you travel.</li>
+            <li>We'll help determine if an amendment or other action is needed before you depart.</li>
+            <li><strong>Reminder:</strong> USCIS must receive amendment petitions before material changes take effect.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Keep your CBP conversation focused</td>
+        <td>
+          <ul class="blist">
+            <li>Answer questions truthfully and succinctly — no need to overshare.</li>
+            <li>Stick closely to what's reflected in your immigration paperwork, especially your job duties, role, and worksite(s).</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Be ready to explain past immigration history</td>
+        <td>
+          <ul class="blist">
+            <li>If you've had visa refusals, overstays, or prior CBP encounters, prepare a clear, simple explanation in advance.</li>
+            <li>Keep any supporting documentation readily accessible.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Know your rights regarding device searches</td>
+        <td>
+          <ul class="blist">
+            <li>CBP has broad legal authority to search, copy, or detain electronic devices at the border without a warrant.</li>
+            <li><strong>Before traveling:</strong> back up all data and consider removing sensitive or confidential Upstart information from your travel devices, or travel with a clean work device.</li>
+            <li>If CBP requests access to your device, you are generally required to comply. Refusal can result in device seizure or denial of entry.</li>
+            <li>Contact CIP or the Immigration Team immediately if you are asked to unlock a device or provide passwords at a port of entry.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════ SECTION 6: SECONDARY INSPECTION ══════════ -->
+  <div class="section-head" id="secondary-inspection">
+    <div class="section-tag">Secondary Inspection</div>
+    <h2>🔍 Secondary Inspection Guidance</h2>
+    <div class="section-dash"></div>
+  </div>
+
+  <p>Being selected for secondary inspection <strong>does not necessarily indicate a problem.</strong> This is a standard CBP procedure to verify immigration status, employment details, or travel history. It can take anywhere from 30 minutes to several hours. Stay patient, provide concise and truthful answers, and refrain from using electronic devices unless requested.</p>
+
+  <div class="callout callout-teal" style="margin-top:14px;">
+    <span class="callout-icon">💡</span>
+    <div>
+      <strong>You may ask to contact your immigration attorney or the Upstart Immigration Team at any point during secondary inspection.</strong> Save CIP and Upstart immigration contacts in your phone before you travel. If you are asked to sign any documents, request the opportunity to speak with an attorney first.
+    </div>
+  </div>
+
+  <p style="margin-top:16px; margin-bottom:12px;">CBP officers may ask questions across the following categories. Familiarize yourself with these before travel:</p>
+
+  <div class="qa-group">
+    <div class="qa-label">General Information</div>
+    <ul>
+      <li>What is the purpose of your visit to the United States?</li>
+      <li>How long do you plan to stay in the U.S.?</li>
+      <li>Where will you be staying? (Provide address if asked.)</li>
+      <li>Have you been to the U.S. before? If so, when and for how long?</li>
+      <li>Do you have family or friends in the U.S.? If so, who are they, and where do they live?</li>
+    </ul>
+  </div>
+
+  <div class="qa-group">
+    <div class="qa-label">Immigration &amp; Visa Status</div>
+    <ul>
+      <li>What type of visa do you have?</li>
+      <li>What is your current immigration status? (H-1B, L-1, F-1, etc.)</li>
+      <li>Do you have your I-797, I-20 (if applicable), or other status documents?</li>
+      <li>Have you ever overstayed a visa or had any issues with U.S. immigration?</li>
+      <li>Have you ever been denied a U.S. visa or entry?</li>
+    </ul>
+  </div>
+
+  <div class="qa-group">
+    <div class="qa-label">Employment &amp; Work-Related (Work Visa Holders)</div>
+    <ul>
+      <li>Who is your employer?</li>
+      <li>What is your job title and role?</li>
+      <li>Where is your work location?</li>
+      <li>How long have you worked for your employer?</li>
+      <li>Do you have an employment verification letter or recent pay stubs?</li>
+      <li>Are you currently on a valid payroll and receiving a salary?</li>
+    </ul>
+  </div>
+
+  <div class="qa-group">
+    <div class="qa-label">Education-Related (F-1 or J-1 Visa Holders)</div>
+    <ul>
+      <li>What school or program are you attending?</li>
+      <li>What is your major or field of study?</li>
+      <li>Are you currently enrolled as a full-time student?</li>
+      <li>Do you have your Form I-20 (F-1) or DS-2019 (J-1) with a valid travel signature?</li>
+      <li>Do you have proof of financial support for your studies?</li>
+    </ul>
+  </div>
+
+  <div class="qa-group">
+    <div class="qa-label">Travel History &amp; Background</div>
+    <ul>
+      <li>Have you traveled outside the U.S. recently? If so, where and why?</li>
+      <li>Have you visited any countries subject to additional scrutiny?</li>
+      <li>Have you ever been arrested or convicted of a crime in any country?</li>
+      <li>Have you ever worked in the U.S. without authorization?</li>
+      <li>Are you carrying any prohibited items, including large amounts of cash or business-related materials?</li>
+    </ul>
+  </div>
+
+  <div class="qa-group">
+    <div class="qa-label">Miscellaneous</div>
+    <ul>
+      <li>Who purchased your flight ticket?</li>
+      <li>Are you traveling alone or with family?</li>
+      <li>Do you have a return ticket or onward travel plans?</li>
+      <li>Is there anyone you want to contact before continuing the inspection?</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════ SECTION 7: DOS UPDATES ══════════ -->
+  <div class="section-head" id="dos-updates">
+    <div class="section-tag">Policy Updates</div>
+    <h2>🌐 Department of State Travel Updates (2025–2026)</h2>
+    <div class="section-dash"></div>
+  </div>
+
+  <div class="callout callout-amber">
+    <span class="callout-icon">⚠️</span>
+    <div>
+      <div class="callout-head">Verify Before Travel</div>
+      <p>This section reflects policy updates current as of <strong>June 30, 2026</strong>. These policies change frequently and without notice. Always verify current requirements with CIP before finalizing any travel plans.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:20px; margin-bottom:6px; font-size:14.5px; color:var(--brand-navy);">In-Person Interview Requirement <span style="color:var(--brand-gray); font-weight:400;">(Effective September 2, 2025)</span></h3>
+  <p>In-person interviews for visa stamp applications are now required for most nonimmigrant visa categories. Online or waived interview processes that were previously available are largely no longer an option.</p>
+
+  <h3 style="margin-top:18px; margin-bottom:6px; font-size:14.5px; color:var(--brand-navy);">TCN Processing Restriction <span style="color:var(--brand-gray); font-weight:400;">(Effective September 6, 2025)</span></h3>
+  <p>As of September 6, 2025, visa applications must be filed at a U.S. Embassy or Consulate in your country of nationality or residence. Effective November 1, 2025, immigrant visa applicants must also interview in the consular district designated for their country of residence or nationality. If you are abroad and need to apply at a third country consulate, contact CIP before scheduling — very limited emergency exceptions may apply at consular discretion and should not be relied upon.</p>
+
+  <h3 style="margin-top:18px; margin-bottom:6px; font-size:14.5px; color:var(--brand-navy);">Enhanced Vetting for H-1B &amp; H-4 Applicants <span style="color:var(--brand-gray); font-weight:400;">(Effective December 3, 2025)</span></h3>
+  <p>The U.S. Department of State expanded vetting requirements for H-1B visa applicants and their H-4 dependents, including additional document verification, heightened scrutiny of employment arrangements, and more detailed background checks.</p>
+
+  <h3 style="margin-top:18px; margin-bottom:6px; font-size:14.5px; color:var(--brand-navy);">Online Presence Reviews — H-1B, H-4, F, M, and J Applicants</h3>
+  <p>Consular officers may request that applicants make their social media accounts public during visa interviews. <strong>It is recommended that you adjust your privacy settings to make your accounts publicly viewable before your visa appointment.</strong> This guidance expanded a June 27, 2025 policy to include H-1B applicants, H-4 dependents, and F, M, and J visa applicants.</p>
+
+  <h3 style="margin-top:18px; margin-bottom:6px; font-size:14.5px; color:var(--brand-navy);">Visa Suspensions <span style="color:var(--brand-gray); font-weight:400;">(Effective December 16, 2025)</span></h3>
+
+  <div class="callout callout-amber" style="margin-bottom:12px;">
+    <span class="callout-icon">⚠️</span>
+    <div>
+      <div class="callout-head">Verify Before Travel</div>
+      <p>The list below reflects suspensions as of December 16, 2025. Suspension lists are subject to change without notice. Confirm current status with CIP before traveling if you are a national of any listed country.</p>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+  <table class="standalone">
+    <thead>
+      <tr>
+        <th style="width:35%;">Suspension Type</th>
+        <th>Countries <em>(as of December 16, 2025 — verify before travel)</em></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color:var(--brand-navy);"><strong>Fully suspended</strong><br><span style="font-weight:400; color:var(--brand-gray); font-size:12.5px;">All nonimmigrant and immigrant visa categories</span></td>
+        <td>Afghanistan, Burkina Faso, Burma (Myanmar), Chad, Republic of the Congo, Equatorial Guinea, Eritrea, Haiti, Iran, Laos, Libya, Mali, Niger, Sierra Leone, Somalia, South Sudan, Sudan, Syria, Yemen, and Nationals holding Palestinian Authority-issued travel documents.</td>
+      </tr>
+      <tr>
+        <td style="color:var(--brand-navy);"><strong>Partially suspended</strong><br><span style="font-weight:400; color:var(--brand-gray); font-size:12.5px;">B-1/B-2, F/M/J, and all immigrant visas</span></td>
+        <td>Angola, Antigua and Barbuda, Benin, Burundi, Cuba, Dominica, Gabon, The Gambia, Ivory Coast (Côte d'Ivoire), Malawi, Mauritania, Nigeria, Senegal, Tanzania, Togo, Tonga, Venezuela, Zambia, and Zimbabwe.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════ SECTION 8: AFTER RETURNING ══════════ -->
+  <div class="section-head" id="after-return">
+    <div class="section-tag">Post-Travel</div>
+    <h2>🔁 After Returning to the U.S.</h2>
+    <div class="section-dash"></div>
+  </div>
+
+  <div class="callout callout-red">
+    <span class="callout-icon">🚨</span>
+    <div>
+      <div class="callout-head">Required Action — Upload to Envoy Global</div>
+      <p>Upload your new I-94 and visa stamp page to the <strong style="color:#7F1D1D;">Envoy Global portal</strong> immediately upon return. This is a critical compliance requirement. It allows the Immigration Team to verify that your I-94 and connected status/work authorization were properly issued. Do not delay — if your I-94 contains an error, early detection is essential.</p>
+    </div>
+  </div>
+
+</div><!-- /content -->
+
+<!-- ══════════ FOOTER ══════════ -->
+<div class="page-footer">
+  <div class="footer-left">
+    <div class="q-circle">?</div>
+    <div>
+      <div class="footer-section-label">Questions</div>
+      <p>Contact <a href="mailto:immigration-team@upstart.com">immigration-team@upstart.com</a></p>
+      <p style="margin-top:4px;">CIP: <a href="mailto:Upstart@immigrationlaw.com">Upstart@immigrationlaw.com</a></p>
+      <p style="margin-top:4px;">Rebecca Miller (Cell/WhatsApp): <a href="tel:14155724343">1-415-572-4343</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-section-label">Important Reminders</div>
+    <ul>
+      <li>Submit your Jira travel ticket before booking anything.</li>
+      <li>Consult CIP with at least 30 days' notice before travel.</li>
+      <li>Upload your I-94 and visa stamp to Envoy Global after every trip.</li>
+      <li>If anything changes — status, dates, role — notify the team immediately.</li>
+      <li>See something outdated? Contact <a href="mailto:rebecca.miller@upstart.com">Rebecca Miller</a>.</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
